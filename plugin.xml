@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+	    xmlns:android="http://schemas.android.com/apk/res/android"
+        id="com.sh.paypal-sdks"
+        version="2.8.0">
+      
+    <name>PayPal SDKs </name>
+	<description>add PayPal SDKs to cordova project, as dependency of other plugins</description>
+	<keywords>paypal,sdks</keywords>
+
+	<engines>
+	    <engine name="cordova" version=">=3.0" />
+	</engines>
+	
+    <platform name="ios">
+        <header-file src="libs/ios/PayPalConfiguration.h" />
+        <header-file src="libs/ios/PayPalFuturePaymentViewController.h" />
+        <header-file src="libs/ios/PayPalMobile.h" />
+        <header-file src="libs/ios/PayPalOAuthScopes.h" />
+        <header-file src="libs/ios/PayPalPayment.h" />
+        <header-file src="libs/ios/PayPalPaymentViewController.h" />
+        <header-file src="libs/ios/PayPalProfileSharingViewController.h" />
+	<header-file src="libs/ios/CardIO.h" />
+	<header-file src="libs/ios/CardIOCreditCardInfo.h" />
+        <header-file src="libs/ios/CardIODetectionMode.h" />
+	<header-file src="libs/ios/CardIOPaymentViewController.h" />
+	<header-file src="libs/ios/CardIOPaymentViewControllerDelegate.h" />
+	<header-file src="libs/ios/CardIOUtilities.h" />
+	<header-file src="libs/ios/CardIOView.h" />
+	<header-file src="libs/ios/CardIOViewDelegate.h" />
+        <source-file src="libs/ios/libPayPalMobile.a" framework="true" />
+
+        <framework src="AudioToolbox.framework" />
+        <framework src="QuartzCore.framework" />
+        <framework src="OpenGLES.framework" />
+        <framework src="CFNetwork.framework" />
+        <framework src="Security.framework" />
+        <framework src="CoreVideo.framework" />
+        <framework src="AVFoundation.framework" />
+        <framework src="CoreLocation.framework" />
+        <framework src="CoreMedia.framework" />
+        <framework src="MessageUI.framework" />
+        <framework src="MobileCoreServices.framework" />
+        <framework src="SystemConfiguration.framework" />
+    </platform>
+
+    <!-- android -->
+    <platform name="android">
+        <source-file src="libs/android/PayPalAndroidSDK.jar" target-dir="libs" />
+    </platform>
+    
+</plugin>
